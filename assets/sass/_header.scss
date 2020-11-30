@@ -53,7 +53,6 @@
 	font-size: 2em; /* 32/16 */
 	padding: 0 1.25em; /* 20/32 */
 	white-space: nowrap;
-	transition: all .3s ease-in-out;
 
 	&:hover,
 	&:focus,
@@ -73,6 +72,8 @@
 	margin: 0;
 	cursor: pointer;
 	padding: 0;
+	position: relative;
+	top: 1px;
 
 	.nav-link {
 		color: $nav-toggle;

@@ -49,15 +49,16 @@
 		&:focus {
 
 			.circle-text {
-				height: 9.075em; /* 363/40 */
-				width: 9.075em; /* 363/40 */
-				border-radius: 9.075em; /* 363/40 */
 				background: $blue-grad-hover;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				color:  #ffffff;
+				transition: 2s zoom ease-in-out;
+				height: 9.075em; /* 363/40 */
+				width: 9.075em; /* 363/40 */
+				border-radius: 9.075em; /* 363/40 */
 
 				&:before {
 					content: '';
@@ -134,4 +135,10 @@
 	font-size: 3.75em; /* 60/16 */
 	font-weight: 300;
 	margin-bottom: 1.1666666666666667em; /* 70/60 */
+}
+
+
+@keyframes zoom {
+  from   { height: 0; width: 0; border-radius: 0 }
+  to { height: 9.075em; width: 9.075em; border-radius: 9.075em }
 }

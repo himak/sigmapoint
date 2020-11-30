@@ -140,12 +140,6 @@ a {
     margin-top: 4.375em;
     /* 70/16 */ }
     .section .item:hover .circle-text, .section .item:focus .circle-text {
-      height: 9.075em;
-      /* 363/40 */
-      width: 9.075em;
-      /* 363/40 */
-      border-radius: 9.075em;
-      /* 363/40 */
       background: -webkit-gradient(linear, left top, left bottom, from(#4379E3), to(#3F5AA5));
       background: -webkit-linear-gradient(#4379E3, #3F5AA5);
       background: -o-linear-gradient(#4379E3, #3F5AA5);
@@ -163,7 +157,16 @@ a {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      color: #ffffff; }
+      color: #ffffff;
+      -webkit-transition: 2s zoom ease-in-out;
+      -o-transition: 2s zoom ease-in-out;
+      transition: 2s zoom ease-in-out;
+      height: 9.075em;
+      /* 363/40 */
+      width: 9.075em;
+      /* 363/40 */
+      border-radius: 9.075em;
+      /* 363/40 */ }
       .section .item:hover .circle-text:before, .section .item:focus .circle-text:before {
         content: '';
         display: -webkit-box;
@@ -269,6 +272,26 @@ a {
   margin-bottom: 1.1666666666666667em;
   /* 70/60 */ }
 
+@-webkit-keyframes zoom {
+  from {
+    height: 0;
+    width: 0;
+    border-radius: 0; }
+  to {
+    height: 9.075em;
+    width: 9.075em;
+    border-radius: 9.075em; } }
+
+@keyframes zoom {
+  from {
+    height: 0;
+    width: 0;
+    border-radius: 0; }
+  to {
+    height: 9.075em;
+    width: 9.075em;
+    border-radius: 9.075em; } }
+
 /* HEADER */
 .border {
   position: absolute;
@@ -336,10 +359,7 @@ a {
   /* 32/16 */
   padding: 0 1.25em;
   /* 20/32 */
-  white-space: nowrap;
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  white-space: nowrap; }
   .nav-link:hover, .nav-link:focus, .nav-link.active {
     color: #344550; }
 
@@ -358,7 +378,9 @@ a {
   /* 22/16 */
   margin: 0;
   cursor: pointer;
-  padding: 0; }
+  padding: 0;
+  position: relative;
+  top: 1px; }
   .menu-toggle .nav-link {
     color: #344550;
     display: block;
@@ -520,8 +542,8 @@ a {
   margin-bottom: 2.5em;
   /* 40/16 */ }
 
-.contact.section .circle {
-  font-size: 6px;
+.contact .circle {
+  font-size: 4px;
   margin-top: 0; }
 
 .contact .link,
@@ -588,7 +610,9 @@ a {
 /* MOBILE */
 @media (min-width: 1900px) {
   body {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .contact .circle {
+    font-size: 6px; } }
 
 @media (max-width: 1900px) {
   body {
