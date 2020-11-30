@@ -1,0 +1,92 @@
+/* HEADER */
+.border {
+	position: absolute;
+	top: 0;
+	background: $blue;
+	height: 1em;
+}
+
+.header {
+	height: 10em; /* 160/16 */
+
+	&.container {
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.logo {
+	margin: 0;
+	font-size: 2em; /* 32/16 */
+	background: url($url-font + '/img/logo.svg') 0 0 no-repeat;
+	background-size: contain;
+	width: 10.125em; /* 324/32 */
+	height: 2.65625em;	/* 85/32 */
+	min-width: 10.125em; /* 324/32 */
+
+	text-indent: -624.9375em; /* 9999/16 */
+}
+
+.menu {
+	display: flex;
+	flex-direction: row-reverse;
+	height: 5em; /* 80/16 */
+}
+
+.nav {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	height: 5.3125em;	/* 85/16 */
+	align-items: center;
+	display: none;
+
+	.menu.show & {
+		display: flex;
+	}
+}
+
+.nav-link {
+	display: inline-block;
+	color: $nav-link;
+	font-weight: 500;
+	font-size: 2em; /* 32/16 */
+	padding: 0 1.25em; /* 20/32 */
+	white-space: nowrap;
+	transition: all .3s ease-in-out;
+
+	&:hover,
+	&:focus,
+	&.active {
+		color:  $nav-link-hover;
+	}
+}
+
+.menu-toggle {
+	font-size: 1em; /* 8/8 */
+	font-family: 'Fira Sans', sans-serif;
+	border: 0;
+	background: url($url-font + 'img/icon-menu.svg') center right no-repeat;
+	background-size: 1.875em 1.375em; /* 30/16 */ /* 22/16 */
+	min-width: 1.875em; /* 30/16 */
+	min-height: 1.375em; /* 22/16 */
+	margin: 0;
+	cursor: pointer;
+	padding: 0;
+
+	.nav-link {
+		color: $nav-toggle;
+		display: block;
+		padding-right: 1.875em; /* 60/32 */
+		white-space: nowrap;
+	}
+
+	.menu.show & .nav-link {
+		color: $nav-link;
+
+		&:hover,
+		&:focus {
+			color: $nav-toggle;
+		}
+	}
+}

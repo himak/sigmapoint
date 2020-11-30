@@ -1,0 +1,39 @@
+$screen-desktop: '1900px';
+$screen-mobile: '840px';
+
+$url: '/assets/';
+$url-font: './../';
+
+$black: #344550;
+$grey: #73787D;
+$blue: #438DD1;
+$blue-grad: linear-gradient(#1163b2, #1c5fae);
+$blue-grad-hover: linear-gradient(#4379E3, #3F5AA5);
+$green: #b1c800;
+
+$text-body: $black;
+$text-head: $black;
+$nav-link: $grey;
+$nav-link-hover: $black;
+$nav-toggle: $black;
+
+$hero-title: $nav-link-hover;
+$hero-subtitle:	$green;
+
+$contact-text: #ffffff;
+
+$circle-shadow: rgba(#0D1C2B, .06);
+$circle-shadow-bg-blue: rgba(#152B5C, .44);
+$circle-bg: #ffffff;
+
+$btn-bg-hover: $black;
+$btn-hover: #ffffff;
+
+$btn-green: #ffffff;
+$btn-green-bg: $green;
+
+$btn-white-bg: #ffffff;
+$btn-white: #1274e2;
+
+$btn-blue-bg: #008ed5;
+$btn-blue: #ffffff;

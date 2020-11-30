@@ -1,0 +1,15 @@
+/* CERTIFICATE */
+.certificate {
+	.container {
+		flex-wrap: wrap;
+	}
+
+	.item {
+		&:hover,
+		&:focus {
+			.title {
+				color:  #4473DE;
+			}
+		}
+	}
+}

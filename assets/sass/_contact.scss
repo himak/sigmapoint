@@ -1,0 +1,83 @@
+/* CONTACT */
+.contact {
+
+	.container {
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		margin-top: 0;
+		margin-bottom: 2.5em; /* 40/16 */
+	}
+
+	&.section .circle {
+		font-size: 6px;
+		margin-top: 0;
+	}
+
+	.link,
+	.branches a {
+		color:  $contact-text;
+	}
+
+	.link {
+		white-space: nowrap;
+		font-size: 3.125em; /* 50/16 */
+		font-weight: 500;
+		margin: 0 0 0 0.8em; /* 40/50 */
+	}
+}
+
+.branches ul {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 6.25em; /* 100/16 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	li {
+		font-size: 2.1875em; /* 35/16 */
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			color: #ffffff;
+			position: relative;
+			padding: 0;
+			margin: 0 1em;
+
+			&:hover,
+			&:focus,
+			&.active {
+
+				&:after {
+					position: absolute;
+					bottom: -0.3125em; /* 5/16 */
+					left: 0;
+					content: '';
+					background: #ffffff;
+					height: 1px;
+					width: 100%;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.line {
+		width: 5em;
+		height: 1px;
+		background: #ffffff;
+	}
+}

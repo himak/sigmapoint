@@ -1,0 +1,23 @@
+/* REFERENCE */
+.reference {
+
+	.container {
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.item {
+		cursor: pointer;
+
+		img {
+			filter: grayscale(100%);
+			opacity: .6;
+		}
+
+		&:hover img,
+		&:focus img {
+			filter: none;
+			opacity: 1;
+		}
+	}
+}

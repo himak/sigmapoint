@@ -1,0 +1,47 @@
+html {
+	scroll-behavior: smooth;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+	// debug
+	/* outline: 1px solid red; */
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 100%;
+	color:  $text-body;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: $text-head;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		transition: all .3s ease-out;
+	}
+}
+
+.sr-only {
+	display: none;
+}
+
+.container {
+	display: flex;
+	max-width: 120em; /* 1920/16 */
+	padding: 0 1.25em; /* 20/16 */
+	margin: 0 auto;
+}

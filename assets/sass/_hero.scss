@@ -1,0 +1,57 @@
+/* HERO */
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: url($url-font + 'img/hero-bg.svg') center center no-repeat;
+	background-size: contain;
+	height: calc(100vh - 10em); /* 160/16 */
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: -2em; /* 32/16 */
+}
+
+.hero-title {
+	font-size: 6.875em; /* 110/16 */
+	font-weight: 500;
+	color:  $hero-title;
+
+	span {
+		display: block;
+		color:  $hero-subtitle;
+	}
+}
+
+.hero-link {
+	font-size: 2em;
+	font-weight: 500;
+	color: $grey;
+	position: absolute;
+	bottom: 1em;
+
+	&:hover,
+	&:focus {
+		color: $black;
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		margin: 0 auto;
+		background: url($url-font + 'img/arrow.svg') center center no-repeat;
+		background-size: 2.1875em 1.375em; /* 35/16 */ /* 22/16 */
+		height: 2.8125em; /* 45/16 */
+		width: 1.375em; /* 22/16 */
+		position: relative;
+		animation: jump 1s infinite;
+	}
+}
+
+@keyframes jump {
+  	0% { top: 0 }
+  	50% { top: 0.625em } /* 10/16 */
+  	100% { top: 0 }
+}
+

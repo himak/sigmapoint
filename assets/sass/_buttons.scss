@@ -1,0 +1,31 @@
+.btn {
+	white-space: nowrap;
+	display: inline-block;
+	margin-top: 6.666666666666667em; /* 200/30 */
+	padding: 1.1666666666666667em 4.666666666666667em; /* 35/30 */ /* 140/30 */
+	min-width: 10em; /* 300/30 */
+	font-size: 1.875em; /* 30/16 */
+	font-weight: 500;
+	border-radius: 3.3333333333333335em; /* 100/30 */
+
+	&:hover,
+	&:focus {
+		background: $btn-bg-hover;
+		color:  $btn-hover;
+	}
+}
+
+.btn-green {
+	background: $btn-green-bg;
+	color: $btn-green;
+}
+
+.btn-white {
+	background: $btn-white-bg;
+	color:  $btn-white;
+}
+
+.btn-blue {
+	background: $btn-blue-bg;
+	color:  $btn-blue;
+}
